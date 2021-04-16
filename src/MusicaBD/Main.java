@@ -412,6 +412,17 @@ public class Main {
 		System.out.println("7. Salir.");
 	}
 	
+	public static void mostrarMenu2() {
+		System.out.println("Selecciona otra opción");
+		System.out.println("1. Listados simples.");
+		System.out.println("2. Altas.");
+		System.out.println("3. Bajas.");
+		System.out.println("4. Modificaciones.");
+		System.out.println("5. Listados personalizados.");
+		System.out.println("6. Operaciones complejas.");
+		System.out.println("7. Salir.");
+	}
+	
 	public static void mostrarMenuListadosSimples() {
 		System.out.println("Selecciona una opción");
 		System.out.println("1. Listado de artistas.");
