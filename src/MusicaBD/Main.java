@@ -248,10 +248,9 @@ public class Main {
 						opc4 = sn.nextInt();
 						switch(opc4) {
 							case 1:
-								System.out.println("Dime el DNI del artista para comprobar si ya existe registro de él");
-								System.out.println("Introduce el dni de un artista");
+								System.out.println("Introduce el dni de un artista:");
 								String DNIArtista = sc.nextLine();
-								if (controladorBD.existeArtista(DNIArtista) == false) {
+								if (!controladorBD.existeArtista(DNIArtista)) {
 									for (int i = 0; i < artis.size(); i++) {
 										if(artis.get(i).getDni().equalsIgnoreCase(DNIArtista)) {
 											controladorBD.dardeBajaArtista(artis.get(i));
@@ -403,6 +402,17 @@ public class Main {
 	
 	public static void mostrarMenu() {
 		System.out.println("Selecciona una opción");
+		System.out.println("1. Listados simples.");
+		System.out.println("2. Altas.");
+		System.out.println("3. Bajas.");
+		System.out.println("4. Modificaciones.");
+		System.out.println("5. Listados personalizados.");
+		System.out.println("6. Operaciones complejas.");
+		System.out.println("7. Salir.");
+	}
+	
+	public static void mostrarMenu2() {
+		System.out.println("Selecciona otra opción");
 		System.out.println("1. Listados simples.");
 		System.out.println("2. Altas.");
 		System.out.println("3. Bajas.");
